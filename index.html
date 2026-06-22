@@ -2,11 +2,12 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Orçamento — Estúdio de PODCAST</title>
 <style>
   @page { size: A4; margin: 14mm 12mm; }
-  /* na tela amplia tudo (evita o ctrl+ manual); impressão/PDF fica no A4 nativo */
-  @media screen { body { zoom: 1.4; } }
+  /* na tela (desktop) amplia tudo; no celular o viewport cuida, no PDF fica A4 nativo */
+  @media screen and (min-width: 700px) { body { zoom: 1.4; } }
   * { box-sizing: border-box; }
   body {
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -84,6 +85,20 @@
   .acc-col-txt { flex: 1; }
   .acc-col-txt p:first-child { margin-top: 0; }
   @media (max-width: 600px) {
+    body { font-size: 15px; }
+    .wrap { padding: 12px; }
+    h1 { font-size: 25px; }
+    .sub { font-size: 14px; }
+    .meta { font-size: 12px; }
+    h2 { font-size: 20px; }
+    .note { font-size: 13px; }
+    .acc-head { flex-wrap: wrap; gap: 4px 8px; padding: 8px 4px; }
+    .acc-title { flex: 1 1 100%; font-size: 16.5px; padding: 2px 2px 0; }
+    .acc-ref { font-size: 13px; display: inline-block; padding: 6px 12px 6px 2px; }
+    .acc-price { font-size: 16px; margin-left: auto; min-width: 0; }
+    .acc-btn { font-size: 20px; width: 22px; height: 22px; }
+    .acc-body p { font-size: 14.5px; }
+    .acc-row.open .acc-body { max-height: 3000px; }
     .acc-cols { flex-direction: column; }
     .acc-col-img { flex: none; width: 100%; }
     .acc-col-img img { height: auto; max-height: none; object-fit: contain; }
